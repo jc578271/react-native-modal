@@ -74,39 +74,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "detox": {
-    "runner-config": "example/e2e/config.json",
-    "configurations": {
-      "ios.sim.debug": {
-        "binaryPath": "example/ios/build/Build/Products/Debug-iphonesimulator/ModalExample.app",
-        "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace example/ios/ModalExample.xcworkspace -scheme ModalExample -configuration Debug -sdk iphonesimulator -derivedDataPath example/ios/build -UseModernBuildSystem=YES | xcpretty -k",
-        "type": "ios.simulator",
-        "device": {
-          "type": "iPhone 8"
-        }
-      },
-      "ios.sim.release": {
-        "binaryPath": "example/ios/build/Build/Products/Debug-iphonesimulator/ModalExample.app",
-        "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace example/ios/ModalExample.xcworkspace -scheme ModalExample -configuration Release -sdk iphonesimulator -derivedDataPath example/ios/build -UseModernBuildSystem=YES | xcpretty -k",
-        "type": "ios.simulator",
-        "device": {
-          "type": "iPhone 8"
-        }
-      },
-      "android.emu.debug": {
-        "binaryPath": "example/android/app/build/outputs/apk/debug/app-debug.apk",
-        "build": "export RCT_NO_LAUNCH_PACKAGER=true && pushd example/android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && popd",
-        "type": "android.emulator",
-        "name": "Pixel_2_API_28"
-      },
-      "android.emu.release": {
-        "binaryPath": "example/android/app/build/outputs/apk/release/app-release.apk",
-        "build": "export RCT_NO_LAUNCH_PACKAGER=true && pushd example/android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && popd",
-        "type": "android.emulator",
-        "name": "Pixel_2_API_28"
-      }
-    },
-    "test-runner": "jest"
   }
 }
