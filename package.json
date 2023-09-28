@@ -2,26 +2,17 @@
   "name": "react-native-modal",
   "version": "13.0.1",
   "description": "An enhanced React Native modal",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
   "files": [
-    "dist/"
+    "src/"
   ],
   "scripts": {
     "lint": "eslint \"src/**/*.{ts, tsx}\"",
     "test": "yarn run test:ts && yarn run lint",
     "release": "yarn semantic-release",
-    "prepare": "tsc",
+    "nothing": "tsc",
     "dev": "tsc --watch",
-    "test:ts": "tsc --noEmit",
-    "build:e2e:android:debug": "detox build -c android.emu.debug",
-    "build:e2e:android:release": "detox build -c android.emu.release",
-    "test:e2e:android:debug": "detox test -c android.emu.debug",
-    "test:e2e:android:release": "detox test -c android.emu.release",
-    "build:e2e:ios:debug": "detox build -c ios.sim.debug",
-    "build:e2e:ios:release": "detox build -c ios.sim.release",
-    "test:e2e:ios:debug": "detox test -c ios.sim.debug",
-    "test:e2e:ios:release": "detox test -c ios.sim.release"
+    "test:ts": "tsc --noEmit"
   },
   "husky": {
     "hooks": {
