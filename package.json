@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.{ts, tsx}\"",
     "test": "yarn run test:ts && yarn run lint",
-    "prepare": "",
+    "build": "",
     "test:ts": "tsc --noEmit"
   },
   "keywords": [
