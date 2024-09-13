@@ -38,7 +38,7 @@
     "@babel/core": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@types/react": "^18.2.6",
-    "@types/react-native": "^0.76.3",
+    "@types/react-native": "^0.75.3",
     "babel-plugin-module-resolver": "4.1.0",
     "detox": "14.7.0",
     "metro-react-native-babel-preset": "0.76.8",
