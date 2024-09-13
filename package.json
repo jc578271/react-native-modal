@@ -62,7 +62,7 @@
     "react": "*",
     "react-native": ">=0.65.0"
   },
-  "packageManager": "yarn@1.15.0",
+  "packageManager": "yarn@1.22.22",
   "engines": {
     "node": ">= 16.0.0"
   }
