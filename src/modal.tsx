@@ -206,6 +206,7 @@ export class ReactNativeModal extends React.Component<ModalProps, State> {
   didUpdateDimensionsEmitter: OrNull<EmitterSubscription> = null;
 
   interactionHandle: OrNull<number> = null;
+  backHandle: any;
 
   constructor(props: ModalProps) {
     super(props);
@@ -252,14 +253,11 @@ export class ReactNativeModal extends React.Component<ModalProps, State> {
     if (this.state.isVisible) {
       this.open();
     }
-    BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPress);
+    this.backHandle = BackHandler.addEventListener('hardwareBackPress', this.onBackButtonPress);
   }
 
   componentWillUnmount() {
-    BackHandler.removeEventListener(
-      'hardwareBackPress',
-      this.onBackButtonPress,
-    );
+    if (this.backHandle) this.backHandle.remove();
     if (this.didUpdateDimensionsEmitter) {
       this.didUpdateDimensionsEmitter.remove();
     }
